@@ -88,7 +88,7 @@ def fill_text(series: pd.Series, column_name: str = "") -> Tuple[pd.Series, str,
     templates = get_text_templates(column_name)
     
     # Fill each missing value with a random template
-    filled_series = series.copy()
+    filled_series = series.copy().astype(object)
     missing_mask = series.isna()
     n_missing = missing_mask.sum()
     
@@ -132,3 +132,7 @@ def fill_text_from_existing(series: pd.Series) -> Tuple[pd.Series, str]:
     filled_series.loc[missing_mask] = random_values
     
     return filled_series, "random from existing"
+
+
+
+

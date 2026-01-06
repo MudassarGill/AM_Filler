@@ -25,7 +25,7 @@ def detect_skewness(series: pd.Series, threshold: float = 1.0) -> bool:
         return False
     
     skew = stats.skew(clean_series)
-    return abs(skew) > threshold
+    return bool(abs(skew) > threshold)
 
 
 def detect_outliers(series: pd.Series, iqr_multiplier: float = 1.5) -> bool:
@@ -54,7 +54,7 @@ def detect_outliers(series: pd.Series, iqr_multiplier: float = 1.5) -> bool:
     outlier_ratio = outliers.sum() / len(clean_series)
     
     # Consider significant if more than 5% are outliers
-    return outlier_ratio > 0.05
+    return bool(outlier_ratio > 0.05)
 
 
 def determine_numeric_strategy(series: pd.Series) -> Tuple[Literal["mean", "median"], str]:
