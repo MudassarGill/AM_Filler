@@ -12,12 +12,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="am_filler",
     version="1.0.0",
-    author="AM_filler Team",
-    author_email="am_filler@example.com",
-    description="Automatic missing value imputation for datasets",
+    author="Mudassar Hussain",
+    author_email="mudassarjutt65030@gmail.com",
+    description="Intelligent, automatic missing value imputation library for pandas datasets with context-aware text handling.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/AM_filler",
+    url="https://github.com/MudassarGill/AM_filler",
     packages=find_packages(exclude=["tests", "examples"]),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -51,7 +51,7 @@ setup(
     },
     keywords="missing values, imputation, data cleaning, pandas, machine learning, preprocessing",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/AM_filler/issues",
-        "Source": "https://github.com/yourusername/AM_filler",
+        "Bug Reports": "https://github.com/MudassarGill/AM_filler/issues",
+        "Source": "https://github.com/MudassarGill/AM_filler",
     },
 )
